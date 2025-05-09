@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Page Should set alert visible on invalid credentials 1`] = `
+<div>
+  <div
+    class="row mt-5"
+  >
+    <div
+      class="card shadow-sm col-sm-8 col-md-7 col-lg-6 col-xl-6 m-auto px-md-5 border-0"
+    >
+      <div
+        class="card-body text-center pt-5 pb-5"
+      >
+        <h1
+          class="card-title h2 fw-bold mb-5"
+        >
+          Login
+        </h1>
+        <p
+          class="card-text"
+        />
+        <form
+          action="#"
+          data-testid="form"
+        >
+          <div
+            class="form-group"
+          >
+            <div
+              class="fade alert alert-danger show"
+              role="alert"
+            >
+              <div
+                class="d-flex align-items-center gap-3"
+              >
+                <div
+                  class=""
+                >
+                  <img
+                    height="24"
+                    src="/assets/curriculum/icons/exclamation.svg"
+                    width="24"
+                  />
+                </div>
+                User does not exist! 
+              </div>
+            </div>
+            <div
+              class="mt-3 d-grid"
+            >
+              <input
+                class="form-control form-control-lg fw-light mb-3 "
+                data-testid="username"
+                name="username"
+                placeholder="Username"
+                value="fake username"
+              />
+              <input
+                class="form-control form-control-lg fw-light mb-3 "
+                data-testid="password"
+                name="password"
+                placeholder="Password"
+                type="password"
+                value="fake password"
+              />
+              <button
+                class="btn btn-primary btn-lg btn"
+                data-testid="submit"
+                type="submit"
+              >
+                Login to Your Account
+              </button>
+            </div>
+          </div>
+        </form>
+        <div
+          class="d-grid mb-3"
+        >
+          <div
+            class="orContainer"
+          >
+            <hr
+              class="lineLeft"
+            />
+            <span>
+              OR
+            </span>
+            <hr
+              class="lineRight"
+            />
+          </div>
+          <button
+            class="text-white discord__button"
+          >
+            <div
+              class="discord__button__image__wrapper"
+            >
+              <img
+                height="24"
+                src="/assets/discordClydeLogoSmallWhite.svg"
+                width="32"
+              />
+            </div>
+            <span
+              class="discord_text"
+            >
+              Login with Discord
+            </span>
+          </button>
+        </div>
+        <a
+          class=" link"
+          href="/forgotpassword"
+        >
+          Forgot your password?
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,20 @@
+documents: graphql/**/*
+schema:
+  - graphql/typeDefs.ts
+  - graphql/queries/*.ts
+generates:
+  graphql/index.tsx:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-resolvers
+      - typescript-react-apollo
+      - typescript-apollo-client-helpers
+    config:
+      contextType: ../@types/helpers#Context
+      useIndexSignature: true
+      withHooks: true
+      withHOC: true
+hooks:
+  afterAllFileWrite:
+    - eslint --fix

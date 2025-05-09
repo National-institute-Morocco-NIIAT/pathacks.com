@@ -1,0 +1,161 @@
+@use 'colors.module';
+$red: hsl(346, 66%, 38%);
+
+@mixin footer-button($color) {
+  display: flex;
+  padding-block: 15px;
+  background: transparent;
+  border-radius: 4px;
+  color: $color;
+  border: 0;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+  transition: background-color 0.1s ease-in;
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:focus {
+    outline: 3px solid rgba($color, 0.5);
+  }
+
+  &:hover {
+    transition: background-color 0.3s ease-out;
+    background-color: rgba($color, 0.1);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 28px 20px;
+  max-width: 592px;
+  width: 100%;
+  row-gap: 26px;
+  background: colors.$bg-white;
+  box-shadow: 0px 4px 25px hsla(0, 0%, 0%, 0.1);
+  border-radius: 10px;
+}
+
+.card__header {
+  font-family: 'Inter';
+
+  .card__header__username {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    color: colors.$primary;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 14px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .card__header__contact__container {
+    display: flex;
+    gap: 13px;
+
+    .card__header__contact {
+      background-color: transparent;
+      display: flex;
+      padding: 2px 16px;
+      border-radius: 20px;
+      color: colors.$primary;
+      align-items: center;
+      border: 1px solid colors.$primary;
+      font-weight: 700;
+      column-gap: 10px;
+    }
+  }
+
+  .card__badges {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .card__header__badge {
+    padding: 4px 24px;
+    background: transparent;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .card__header__badge__flagged {
+    border: 1px solid $red;
+    color: $red;
+  }
+
+  .card__header__badge__module {
+    border: 1px solid hsl(0, 0, 0);
+  }
+}
+
+.card__section {
+  .card__section__header {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .card__section__desc {
+    font-family: 'Inter';
+    font-size: 16px;
+  }
+
+  .card__section--explanation {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 12px;
+    color: colors.$primary;
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .card__section__explanation {
+    margin-left: 10px;
+    font-size: 14px;
+  }
+}
+
+.card__footer {
+  display: flex;
+  column-gap: 26px;
+  margin-top: auto;
+
+  .card__footer__btn__remove {
+    @include footer-button($red);
+  }
+
+  .card__footer__btn__unflag {
+    @include footer-button(colors.$warning);
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .card__footer {
+    flex-direction: column;
+  }
+
+  .card__header__contact__container {
+    flex-direction: column;
+
+    .card__header__contact {
+      width: fit-content;
+    }
+  }
+}
+
+@media only screen and (max-width: 335px) {
+  .card__badges {
+    flex-direction: column;
+    max-width: fit-content;
+  }
+}

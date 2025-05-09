@@ -1,0 +1,1503 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Users test Should be able to switch search options 1`] = `
+<div>
+  <nav
+    class="navbar navbar navbar-expand-lg navbar-light bg-white"
+    id="appNav"
+  >
+    <div
+      class="container"
+    >
+      <a
+        class="navbar-brand"
+        href="/"
+      >
+        <div
+          class="navbar-brand text-primary fw-bold"
+        >
+          C0D3
+          <span
+            class="isAdminBadge badge"
+          >
+             ADMIN 
+          </span>
+        </div>
+      </a>
+      <button
+        aria-controls="basic-navbar-nav"
+        aria-label="Toggle navigation"
+        class="navbar-toggler collapsed"
+        type="button"
+      >
+        <span
+          class="navbar-toggler-icon"
+        />
+      </button>
+      <div
+        class="text-center navbar-collapse collapse"
+        id="basic-navbar-nav"
+      >
+        <div
+          class="m-auto navbar-nav"
+        >
+          <a
+            class="nav-item nav-link px-3 noUnderline"
+            href="/curriculum"
+          >
+            Curriculum
+          </a>
+          <a
+            class="nav-item nav-link px-3 noUnderline"
+            href="https://github.com/garageScript/c0d3-app"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Repo
+          </a>
+          <a
+            class="nav-item nav-link px-3 noUnderline"
+            href="/docs/learn"
+          >
+            Learn
+          </a>
+          <a
+            class="nav-item nav-link px-3 noUnderline"
+            href="https://discord.gg/c0d3"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Community
+          </a>
+        </div>
+        <div
+          class="dropdown"
+          role="menu"
+        >
+          <div
+            class="d-none d-lg-block"
+          >
+            <button
+              aria-expanded="false"
+              class="nav-user-toggle  dropdown-toggle"
+              data-testid="user-info-image"
+              id="user_nav_toggle"
+            >
+              <div
+                class="text-uppercase bg-primary rounded-circle text-light user_info_image user-icon"
+              >
+                A 
+              </div>
+              <svg
+                aria-hidden="true"
+                class="octicon octicon-chevron-down"
+                fill="currentColor"
+                focusable="false"
+                height="16"
+                role="img"
+                style="display: inline-block; user-select: none; vertical-align: text-bottom; overflow: visible;"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="d-lg-none"
+          >
+            <a
+              class="dropdown-item dropdown-item"
+              data-rr-ui-dropdown-item=""
+              href="/admin/lessons"
+            >
+              Lessons
+            </a>
+            <a
+              class="dropdown-item dropdown-item"
+              data-rr-ui-dropdown-item=""
+              href="/admin/users"
+            >
+              Users
+            </a>
+            <a
+              class="dropdown-item dropdown-item"
+              data-rr-ui-dropdown-item=""
+              href="/admin/alerts"
+            >
+              Alerts
+            </a>
+            <a
+              class="dropdown-item dropdown-item"
+              data-rr-ui-dropdown-item=""
+              href="/profile/fakeusername"
+            >
+              Profile
+            </a>
+            <a
+              class="dropdown-item  dropdown-item"
+              data-rr-ui-dropdown-item=""
+              href="#"
+              role="button"
+              tabindex="0"
+            >
+              <span>
+                <div
+                  class="light-button d-inline"
+                >
+                  <button
+                    class="btn border btn-light ms-2"
+                    style="color: rgb(41, 41, 41);"
+                  >
+                    Logout
+                  </button>
+                </div>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div
+    class="container-md container"
+  >
+    <div
+      class="d-flex flex-column col-12"
+    >
+      <h1
+        class="text-primary text-center fw-bold display-1"
+      >
+        Users
+      </h1>
+      <div
+        class="mb-2"
+      >
+        <div
+          class="d-flex flex-row"
+        >
+          <h4
+            class="text-primary fw-bold me-1"
+          >
+            <label
+              for="search"
+            >
+              Search By:
+            </label>
+          </h4>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless"
+              style="color: rgb(142, 142, 142);"
+            >
+              ID
+            </button>
+          </div>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless btn-primary"
+              style="color: rgb(255, 255, 255);"
+            >
+              Username
+            </button>
+          </div>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless"
+              style="color: rgb(142, 142, 142);"
+            >
+              Name
+            </button>
+          </div>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless"
+              style="color: rgb(142, 142, 142);"
+            >
+              Email
+            </button>
+          </div>
+        </div>
+      </div>
+      <input
+        class="form-control"
+        id="search"
+        type="text"
+      />
+      <div
+        class="mt-2 mb-2"
+      >
+        <div
+          class="d-flex flex-row"
+        >
+          <h4
+            class="text-primary fw-bold me-1"
+          >
+            Filter By:
+          </h4>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless"
+              style="color: rgb(142, 142, 142);"
+            >
+              Admins
+            </button>
+          </div>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless"
+              style="color: rgb(142, 142, 142);"
+            >
+              Non-Admins
+            </button>
+          </div>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless btn-primary"
+              style="color: rgb(255, 255, 255);"
+            >
+              None
+            </button>
+          </div>
+        </div>
+      </div>
+      <table
+        class="table table-striped"
+      >
+        <thead>
+          <tr
+            class="text-center"
+          >
+            <th>
+              ID
+            </th>
+            <th>
+              Username
+            </th>
+            <th>
+              Name
+            </th>
+            <th>
+              Email
+            </th>
+            <th>
+              Admin
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="text-center"
+          >
+            <td
+              class="align-middle"
+            >
+              5
+            </td>
+            <td
+              class="align-middle"
+            >
+              admin
+            </td>
+            <td
+              class="align-middle"
+            >
+              admin admin
+            </td>
+            <td
+              class="align-middle"
+            >
+              some@mail.com
+            </td>
+            <td
+              class="align-middle"
+            >
+              <button
+                class="btn borderless btn-danger"
+                style="color: rgb(41, 41, 41);"
+              >
+                Remove
+              </button>
+            </td>
+          </tr>
+          <tr
+            class="text-center"
+          >
+            <td
+              class="align-middle"
+            >
+              2
+            </td>
+            <td
+              class="align-middle"
+            >
+              newbie
+            </td>
+            <td
+              class="align-middle"
+            >
+              newbie newbie
+            </td>
+            <td
+              class="align-middle"
+            >
+              some@mail.com
+            </td>
+            <td
+              class="align-middle"
+            >
+              <button
+                class="btn borderless btn-success"
+                style="color: rgb(41, 41, 41);"
+              >
+                Add
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <footer
+    class="mt-5 fw-light text-center pb-5 text-muted"
+  >
+    © Copyright 
+    2024
+     GarageScript
+  </footer>
+</div>
+`;
+
+exports[`Users test Should be able to switch search options 2`] = `
+<div>
+  <nav
+    class="navbar navbar navbar-expand-lg navbar-light bg-white"
+    id="appNav"
+  >
+    <div
+      class="container"
+    >
+      <a
+        class="navbar-brand"
+        href="/"
+      >
+        <div
+          class="navbar-brand text-primary fw-bold"
+        >
+          C0D3
+          <span
+            class="isAdminBadge badge"
+          >
+             ADMIN 
+          </span>
+        </div>
+      </a>
+      <button
+        aria-controls="basic-navbar-nav"
+        aria-label="Toggle navigation"
+        class="navbar-toggler collapsed"
+        type="button"
+      >
+        <span
+          class="navbar-toggler-icon"
+        />
+      </button>
+      <div
+        class="text-center navbar-collapse collapse"
+        id="basic-navbar-nav"
+      >
+        <div
+          class="m-auto navbar-nav"
+        >
+          <a
+            class="nav-item nav-link px-3 noUnderline"
+            href="/curriculum"
+          >
+            Curriculum
+          </a>
+          <a
+            class="nav-item nav-link px-3 noUnderline"
+            href="https://github.com/garageScript/c0d3-app"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Repo
+          </a>
+          <a
+            class="nav-item nav-link px-3 noUnderline"
+            href="/docs/learn"
+          >
+            Learn
+          </a>
+          <a
+            class="nav-item nav-link px-3 noUnderline"
+            href="https://discord.gg/c0d3"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Community
+          </a>
+        </div>
+        <div
+          class="dropdown"
+          role="menu"
+        >
+          <div
+            class="d-none d-lg-block"
+          >
+            <button
+              aria-expanded="false"
+              class="nav-user-toggle  dropdown-toggle"
+              data-testid="user-info-image"
+              id="user_nav_toggle"
+            >
+              <div
+                class="text-uppercase bg-primary rounded-circle text-light user_info_image user-icon"
+              >
+                A 
+              </div>
+              <svg
+                aria-hidden="true"
+                class="octicon octicon-chevron-down"
+                fill="currentColor"
+                focusable="false"
+                height="16"
+                role="img"
+                style="display: inline-block; user-select: none; vertical-align: text-bottom; overflow: visible;"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="d-lg-none"
+          >
+            <a
+              class="dropdown-item dropdown-item"
+              data-rr-ui-dropdown-item=""
+              href="/admin/lessons"
+            >
+              Lessons
+            </a>
+            <a
+              class="dropdown-item dropdown-item"
+              data-rr-ui-dropdown-item=""
+              href="/admin/users"
+            >
+              Users
+            </a>
+            <a
+              class="dropdown-item dropdown-item"
+              data-rr-ui-dropdown-item=""
+              href="/admin/alerts"
+            >
+              Alerts
+            </a>
+            <a
+              class="dropdown-item dropdown-item"
+              data-rr-ui-dropdown-item=""
+              href="/profile/fakeusername"
+            >
+              Profile
+            </a>
+            <a
+              class="dropdown-item  dropdown-item"
+              data-rr-ui-dropdown-item=""
+              href="#"
+              role="button"
+              tabindex="0"
+            >
+              <span>
+                <div
+                  class="light-button d-inline"
+                >
+                  <button
+                    class="btn border btn-light ms-2"
+                    style="color: rgb(41, 41, 41);"
+                  >
+                    Logout
+                  </button>
+                </div>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div
+    class="container-md container"
+  >
+    <div
+      class="d-flex flex-column col-12"
+    >
+      <h1
+        class="text-primary text-center fw-bold display-1"
+      >
+        Users
+      </h1>
+      <div
+        class="mb-2"
+      >
+        <div
+          class="d-flex flex-row"
+        >
+          <h4
+            class="text-primary fw-bold me-1"
+          >
+            <label
+              for="search"
+            >
+              Search By:
+            </label>
+          </h4>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless"
+              style="color: rgb(142, 142, 142);"
+            >
+              ID
+            </button>
+          </div>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless btn-primary"
+              style="color: rgb(255, 255, 255);"
+            >
+              Username
+            </button>
+          </div>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless"
+              style="color: rgb(142, 142, 142);"
+            >
+              Name
+            </button>
+          </div>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless"
+              style="color: rgb(142, 142, 142);"
+            >
+              Email
+            </button>
+          </div>
+        </div>
+      </div>
+      <input
+        class="form-control"
+        id="search"
+        type="text"
+      />
+      <div
+        class="mt-2 mb-2"
+      >
+        <div
+          class="d-flex flex-row"
+        >
+          <h4
+            class="text-primary fw-bold me-1"
+          >
+            Filter By:
+          </h4>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless"
+              style="color: rgb(142, 142, 142);"
+            >
+              Admins
+            </button>
+          </div>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless"
+              style="color: rgb(142, 142, 142);"
+            >
+              Non-Admins
+            </button>
+          </div>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless btn-primary"
+              style="color: rgb(255, 255, 255);"
+            >
+              None
+            </button>
+          </div>
+        </div>
+      </div>
+      <table
+        class="table table-striped"
+      >
+        <thead>
+          <tr
+            class="text-center"
+          >
+            <th>
+              ID
+            </th>
+            <th>
+              Username
+            </th>
+            <th>
+              Name
+            </th>
+            <th>
+              Email
+            </th>
+            <th>
+              Admin
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="text-center"
+          >
+            <td
+              class="align-middle"
+            >
+              5
+            </td>
+            <td
+              class="align-middle"
+            >
+              admin
+            </td>
+            <td
+              class="align-middle"
+            >
+              admin admin
+            </td>
+            <td
+              class="align-middle"
+            >
+              some@mail.com
+            </td>
+            <td
+              class="align-middle"
+            >
+              <button
+                class="btn borderless btn-danger"
+                style="color: rgb(41, 41, 41);"
+              >
+                Remove
+              </button>
+            </td>
+          </tr>
+          <tr
+            class="text-center"
+          >
+            <td
+              class="align-middle"
+            >
+              2
+            </td>
+            <td
+              class="align-middle"
+            >
+              newbie
+            </td>
+            <td
+              class="align-middle"
+            >
+              newbie newbie
+            </td>
+            <td
+              class="align-middle"
+            >
+              some@mail.com
+            </td>
+            <td
+              class="align-middle"
+            >
+              <button
+                class="btn borderless btn-success"
+                style="color: rgb(41, 41, 41);"
+              >
+                Add
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <footer
+    class="mt-5 fw-light text-center pb-5 text-muted"
+  >
+    © Copyright 
+    2024
+     GarageScript
+  </footer>
+</div>
+`;
+
+exports[`Users test Should be able to switch search options 3`] = `
+<div>
+  <nav
+    class="navbar navbar navbar-expand-lg navbar-light bg-white"
+    id="appNav"
+  >
+    <div
+      class="container"
+    >
+      <a
+        class="navbar-brand"
+        href="/"
+      >
+        <div
+          class="navbar-brand text-primary fw-bold"
+        >
+          C0D3
+          <span
+            class="isAdminBadge badge"
+          >
+             ADMIN 
+          </span>
+        </div>
+      </a>
+      <button
+        aria-controls="basic-navbar-nav"
+        aria-label="Toggle navigation"
+        class="navbar-toggler collapsed"
+        type="button"
+      >
+        <span
+          class="navbar-toggler-icon"
+        />
+      </button>
+      <div
+        class="text-center navbar-collapse collapse"
+        id="basic-navbar-nav"
+      >
+        <div
+          class="m-auto navbar-nav"
+        >
+          <a
+            class="nav-item nav-link px-3 noUnderline"
+            href="/curriculum"
+          >
+            Curriculum
+          </a>
+          <a
+            class="nav-item nav-link px-3 noUnderline"
+            href="https://github.com/garageScript/c0d3-app"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Repo
+          </a>
+          <a
+            class="nav-item nav-link px-3 noUnderline"
+            href="/docs/learn"
+          >
+            Learn
+          </a>
+          <a
+            class="nav-item nav-link px-3 noUnderline"
+            href="https://discord.gg/c0d3"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Community
+          </a>
+        </div>
+        <div
+          class="dropdown"
+          role="menu"
+        >
+          <div
+            class="d-none d-lg-block"
+          >
+            <button
+              aria-expanded="false"
+              class="nav-user-toggle  dropdown-toggle"
+              data-testid="user-info-image"
+              id="user_nav_toggle"
+            >
+              <div
+                class="text-uppercase bg-primary rounded-circle text-light user_info_image user-icon"
+              >
+                A 
+              </div>
+              <svg
+                aria-hidden="true"
+                class="octicon octicon-chevron-down"
+                fill="currentColor"
+                focusable="false"
+                height="16"
+                role="img"
+                style="display: inline-block; user-select: none; vertical-align: text-bottom; overflow: visible;"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="d-lg-none"
+          >
+            <a
+              class="dropdown-item dropdown-item"
+              data-rr-ui-dropdown-item=""
+              href="/admin/lessons"
+            >
+              Lessons
+            </a>
+            <a
+              class="dropdown-item dropdown-item"
+              data-rr-ui-dropdown-item=""
+              href="/admin/users"
+            >
+              Users
+            </a>
+            <a
+              class="dropdown-item dropdown-item"
+              data-rr-ui-dropdown-item=""
+              href="/admin/alerts"
+            >
+              Alerts
+            </a>
+            <a
+              class="dropdown-item dropdown-item"
+              data-rr-ui-dropdown-item=""
+              href="/profile/fakeusername"
+            >
+              Profile
+            </a>
+            <a
+              class="dropdown-item  dropdown-item"
+              data-rr-ui-dropdown-item=""
+              href="#"
+              role="button"
+              tabindex="0"
+            >
+              <span>
+                <div
+                  class="light-button d-inline"
+                >
+                  <button
+                    class="btn border btn-light ms-2"
+                    style="color: rgb(41, 41, 41);"
+                  >
+                    Logout
+                  </button>
+                </div>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div
+    class="container-md container"
+  >
+    <div
+      class="d-flex flex-column col-12"
+    >
+      <h1
+        class="text-primary text-center fw-bold display-1"
+      >
+        Users
+      </h1>
+      <div
+        class="mb-2"
+      >
+        <div
+          class="d-flex flex-row"
+        >
+          <h4
+            class="text-primary fw-bold me-1"
+          >
+            <label
+              for="search"
+            >
+              Search By:
+            </label>
+          </h4>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless"
+              style="color: rgb(142, 142, 142);"
+            >
+              ID
+            </button>
+          </div>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless"
+              style="color: rgb(142, 142, 142);"
+            >
+              Username
+            </button>
+          </div>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless btn-primary"
+              style="color: rgb(255, 255, 255);"
+            >
+              Name
+            </button>
+          </div>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless"
+              style="color: rgb(142, 142, 142);"
+            >
+              Email
+            </button>
+          </div>
+        </div>
+      </div>
+      <input
+        class="form-control"
+        id="search"
+        type="text"
+      />
+      <div
+        class="mt-2 mb-2"
+      >
+        <div
+          class="d-flex flex-row"
+        >
+          <h4
+            class="text-primary fw-bold me-1"
+          >
+            Filter By:
+          </h4>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless"
+              style="color: rgb(142, 142, 142);"
+            >
+              Admins
+            </button>
+          </div>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless"
+              style="color: rgb(142, 142, 142);"
+            >
+              Non-Admins
+            </button>
+          </div>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless btn-primary"
+              style="color: rgb(255, 255, 255);"
+            >
+              None
+            </button>
+          </div>
+        </div>
+      </div>
+      <table
+        class="table table-striped"
+      >
+        <thead>
+          <tr
+            class="text-center"
+          >
+            <th>
+              ID
+            </th>
+            <th>
+              Username
+            </th>
+            <th>
+              Name
+            </th>
+            <th>
+              Email
+            </th>
+            <th>
+              Admin
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="text-center"
+          >
+            <td
+              class="align-middle"
+            >
+              5
+            </td>
+            <td
+              class="align-middle"
+            >
+              admin
+            </td>
+            <td
+              class="align-middle"
+            >
+              admin admin
+            </td>
+            <td
+              class="align-middle"
+            >
+              some@mail.com
+            </td>
+            <td
+              class="align-middle"
+            >
+              <button
+                class="btn borderless btn-danger"
+                style="color: rgb(41, 41, 41);"
+              >
+                Remove
+              </button>
+            </td>
+          </tr>
+          <tr
+            class="text-center"
+          >
+            <td
+              class="align-middle"
+            >
+              2
+            </td>
+            <td
+              class="align-middle"
+            >
+              newbie
+            </td>
+            <td
+              class="align-middle"
+            >
+              newbie newbie
+            </td>
+            <td
+              class="align-middle"
+            >
+              some@mail.com
+            </td>
+            <td
+              class="align-middle"
+            >
+              <button
+                class="btn borderless btn-success"
+                style="color: rgb(41, 41, 41);"
+              >
+                Add
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <footer
+    class="mt-5 fw-light text-center pb-5 text-muted"
+  >
+    © Copyright 
+    2024
+     GarageScript
+  </footer>
+</div>
+`;
+
+exports[`Users test Should be able to switch search options 4`] = `
+<div>
+  <nav
+    class="navbar navbar navbar-expand-lg navbar-light bg-white"
+    id="appNav"
+  >
+    <div
+      class="container"
+    >
+      <a
+        class="navbar-brand"
+        href="/"
+      >
+        <div
+          class="navbar-brand text-primary fw-bold"
+        >
+          C0D3
+          <span
+            class="isAdminBadge badge"
+          >
+             ADMIN 
+          </span>
+        </div>
+      </a>
+      <button
+        aria-controls="basic-navbar-nav"
+        aria-label="Toggle navigation"
+        class="navbar-toggler collapsed"
+        type="button"
+      >
+        <span
+          class="navbar-toggler-icon"
+        />
+      </button>
+      <div
+        class="text-center navbar-collapse collapse"
+        id="basic-navbar-nav"
+      >
+        <div
+          class="m-auto navbar-nav"
+        >
+          <a
+            class="nav-item nav-link px-3 noUnderline"
+            href="/curriculum"
+          >
+            Curriculum
+          </a>
+          <a
+            class="nav-item nav-link px-3 noUnderline"
+            href="https://github.com/garageScript/c0d3-app"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Repo
+          </a>
+          <a
+            class="nav-item nav-link px-3 noUnderline"
+            href="/docs/learn"
+          >
+            Learn
+          </a>
+          <a
+            class="nav-item nav-link px-3 noUnderline"
+            href="https://discord.gg/c0d3"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Community
+          </a>
+        </div>
+        <div
+          class="dropdown"
+          role="menu"
+        >
+          <div
+            class="d-none d-lg-block"
+          >
+            <button
+              aria-expanded="false"
+              class="nav-user-toggle  dropdown-toggle"
+              data-testid="user-info-image"
+              id="user_nav_toggle"
+            >
+              <div
+                class="text-uppercase bg-primary rounded-circle text-light user_info_image user-icon"
+              >
+                A 
+              </div>
+              <svg
+                aria-hidden="true"
+                class="octicon octicon-chevron-down"
+                fill="currentColor"
+                focusable="false"
+                height="16"
+                role="img"
+                style="display: inline-block; user-select: none; vertical-align: text-bottom; overflow: visible;"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="d-lg-none"
+          >
+            <a
+              class="dropdown-item dropdown-item"
+              data-rr-ui-dropdown-item=""
+              href="/admin/lessons"
+            >
+              Lessons
+            </a>
+            <a
+              class="dropdown-item dropdown-item"
+              data-rr-ui-dropdown-item=""
+              href="/admin/users"
+            >
+              Users
+            </a>
+            <a
+              class="dropdown-item dropdown-item"
+              data-rr-ui-dropdown-item=""
+              href="/admin/alerts"
+            >
+              Alerts
+            </a>
+            <a
+              class="dropdown-item dropdown-item"
+              data-rr-ui-dropdown-item=""
+              href="/profile/fakeusername"
+            >
+              Profile
+            </a>
+            <a
+              class="dropdown-item  dropdown-item"
+              data-rr-ui-dropdown-item=""
+              href="#"
+              role="button"
+              tabindex="0"
+            >
+              <span>
+                <div
+                  class="light-button d-inline"
+                >
+                  <button
+                    class="btn border btn-light ms-2"
+                    style="color: rgb(41, 41, 41);"
+                  >
+                    Logout
+                  </button>
+                </div>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div
+    class="container-md container"
+  >
+    <div
+      class="d-flex flex-column col-12"
+    >
+      <h1
+        class="text-primary text-center fw-bold display-1"
+      >
+        Users
+      </h1>
+      <div
+        class="mb-2"
+      >
+        <div
+          class="d-flex flex-row"
+        >
+          <h4
+            class="text-primary fw-bold me-1"
+          >
+            <label
+              for="search"
+            >
+              Search By:
+            </label>
+          </h4>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless"
+              style="color: rgb(142, 142, 142);"
+            >
+              ID
+            </button>
+          </div>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless"
+              style="color: rgb(142, 142, 142);"
+            >
+              Username
+            </button>
+          </div>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless btn-primary"
+              style="color: rgb(255, 255, 255);"
+            >
+              Name
+            </button>
+          </div>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless"
+              style="color: rgb(142, 142, 142);"
+            >
+              Email
+            </button>
+          </div>
+        </div>
+      </div>
+      <input
+        class="form-control"
+        id="search"
+        type="text"
+      />
+      <div
+        class="mt-2 mb-2"
+      >
+        <div
+          class="d-flex flex-row"
+        >
+          <h4
+            class="text-primary fw-bold me-1"
+          >
+            Filter By:
+          </h4>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless btn-primary"
+              style="color: rgb(255, 255, 255);"
+            >
+              Admins
+            </button>
+          </div>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless"
+              style="color: rgb(142, 142, 142);"
+            >
+              Non-Admins
+            </button>
+          </div>
+          <div
+            style="margin-top: -1.57px;"
+          >
+            <button
+              class="btn borderless"
+              style="color: rgb(142, 142, 142);"
+            >
+              None
+            </button>
+          </div>
+        </div>
+      </div>
+      <table
+        class="table table-striped"
+      >
+        <thead>
+          <tr
+            class="text-center"
+          >
+            <th>
+              ID
+            </th>
+            <th>
+              Username
+            </th>
+            <th>
+              Name
+            </th>
+            <th>
+              Email
+            </th>
+            <th>
+              Admin
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="text-center"
+          >
+            <td
+              class="align-middle"
+            >
+              5
+            </td>
+            <td
+              class="align-middle"
+            >
+              admin
+            </td>
+            <td
+              class="align-middle"
+            >
+              admin admin
+            </td>
+            <td
+              class="align-middle"
+            >
+              some@mail.com
+            </td>
+            <td
+              class="align-middle"
+            >
+              <button
+                class="btn borderless btn-danger"
+                style="color: rgb(41, 41, 41);"
+              >
+                Remove
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <footer
+    class="mt-5 fw-light text-center pb-5 text-muted"
+  >
+    © Copyright 
+    2024
+     GarageScript
+  </footer>
+</div>
+`;

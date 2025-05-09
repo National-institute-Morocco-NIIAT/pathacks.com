@@ -1,0 +1,100 @@
+@use '_variables.module';
+
+// Override default variables before the import
+$body-bg: #fff;
+
+// If the theme-color colors are missing, make sure to add it here first
+// e.g., 'success': #faj2;
+
+$theme-colors: (
+  'primary': variables.$primary,
+  'secondary': variables.$secondary,
+  'warning': variables.$warning,
+  'gray': variables.$gray,
+  'light': variables.$light,
+  'danger': variables.$danger,
+  'success': variables.$success,
+  'info': variables.$info,
+  'dark': variables.$dark
+);
+
+// Workaround for btn-light hover color
+.btn-light {
+  background-color: #fff !important;
+}
+
+.btn-light:hover {
+  background-color: hsl(0deg, 0%, 95%) !important;
+}
+
+$font-family-sans-serif:
+  Roboto,
+  -apple-system,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  'Helvetica Neue',
+  Arial,
+  'Noto Sans',
+  sans-serif,
+  'Apple Color Emoji',
+  'Segoe UI Emoji',
+  'Segoe UI Symbol',
+  'Noto Color Emoji';
+
+// Available variables: https://github.com/twbs/bootstrap/blob/master/scss/_variables.scss
+$green: #00cf92 !default;
+
+// Enable negative margins
+$enable-negative-margins: true;
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+
+// Import Fonts
+@import './fonts.scss';
+
+// Global CSS
+body {
+  /* This fix the font difference between browsers
+   * https://github.com/garageScript/c0d3-app/pull/134
+   */
+  font-optical-sizing: none;
+  background: rgba(84, 56, 220, 0.03);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+
+  /* 16px */
+  // Global accessibility feature allowing users to turn off smooth scroll
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
+}
+
+.outline-danger {
+  border: 1px solid rgba(220, 53, 69, 1);
+
+  &:focus {
+    border: 1px solid rgba(220, 53, 69, 1);
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+  }
+}
+
+p {
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.text-danger {
+  color: #721c24 !important;
+}
+
+// Local SCSS Imports
+@import './challengeMaterial.scss';
+@import './modalCard.scss';
+@import './prism.scss';
+@import './modalImage.module.scss';
+@import './globalMDX.scss';
+@import '_text.module';

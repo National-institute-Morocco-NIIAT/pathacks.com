@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  postgres:
+    container_name: c0d3_db
+    # production postgres is currently on version 12
+    image: postgres:12-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      # enviroment variables for development database
+      POSTGRES_USER: c0d3_admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: c0d3
+    volumes:
+      - c0d3_db:/var/lib/postgresql/data
+      - ./initScripts:/docker-entrypoint-initdb.d/
+
+# Use docker managed volume
+volumes:
+  c0d3_db:

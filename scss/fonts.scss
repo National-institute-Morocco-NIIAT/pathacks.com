@@ -1,0 +1,34 @@
+// Used for Buttons text and h3 header
+@font-face {
+  font-family: 'PT Mono';
+  src: url('/fonts/PTMono-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'PT Mono';
+  font-weight: bold;
+  src: url('/fonts/PTMono-Bold.woff') format('woff');
+}
+
+// Used for code
+@font-face {
+  font-family: 'Fira Code';
+  src: url('/fonts/FiraCode-Regular.woff2') format('woff2');
+}
+
+// Used for h1 header
+@font-face {
+  font-family: 'Rubik';
+  font-weight: bold;
+  src: url('/fonts/Rubik-Bold.ttf') format('truetype');
+}
+
+// Used for Paragraphs
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-weight: bold;
+  src: url('/fonts/Inter-Bold.woff2') format('woff2');
+}

@@ -1,0 +1,27 @@
+.lessonLink {
+  font-size: 1.2rem;
+  color: rgb(66, 66, 66);
+  max-width: max(200px, 20vw);
+  text-decoration: none;
+  > span {
+    font-weight: bold;
+  }
+  &:hover {
+    color: black;
+    text-decoration: underline;
+  }
+}
+.next {
+  margin-left: auto;
+  &::before {
+    content: '\2192';
+    display: block;
+  }
+}
+.previous {
+  margin-right: auto;
+  &::before {
+    content: '\2190';
+    display: block;
+  }
+}

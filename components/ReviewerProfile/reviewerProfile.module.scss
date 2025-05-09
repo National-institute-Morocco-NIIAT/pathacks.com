@@ -1,0 +1,21 @@
+.comment_author__inline {
+  margin-left: 1em;
+  font-size: 0.85rem;
+  color: gray;
+  width: max-content;
+  &:hover {
+    color: black;
+    text-decoration-color: gray;
+  }
+}
+.comment_author {
+  color: black;
+  width: max-content;
+  &:hover {
+    color: black;
+    text-decoration-color: gray;
+  }
+}
+.wrapper {
+  background-color: #fafbfc;
+}

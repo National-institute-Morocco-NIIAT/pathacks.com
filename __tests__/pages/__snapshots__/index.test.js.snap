@@ -1,0 +1,398 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index Page Should render index page 1`] = `
+<div>
+  <nav
+    class="navbar navbar navbar-expand-lg navbar-light bg-white"
+    id="appNav"
+  >
+    <div
+      class="container"
+    >
+      <a
+        class="navbar-brand"
+        href="/"
+      >
+        <div
+          class="navbar-brand text-primary fw-bold"
+        >
+          C0D3
+          
+        </div>
+      </a>
+      <button
+        aria-controls="basic-navbar-nav"
+        aria-label="Toggle navigation"
+        class="navbar-toggler collapsed"
+        type="button"
+      >
+        <span
+          class="navbar-toggler-icon"
+        />
+      </button>
+      <div
+        class="text-center navbar-collapse collapse"
+        id="basic-navbar-nav"
+      >
+        <div
+          class="m-auto navbar-nav"
+        >
+          <a
+            class="nav-item nav-link px-3 noUnderline"
+            href="/curriculum"
+          >
+            Curriculum
+          </a>
+          <a
+            class="nav-item nav-link px-3 noUnderline"
+            href="https://github.com/garageScript/c0d3-app"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Repo
+          </a>
+          <a
+            class="nav-item nav-link px-3 noUnderline"
+            href="/docs/learn"
+          >
+            Learn
+          </a>
+          <a
+            class="nav-item nav-link px-3 noUnderline"
+            href="https://discord.gg/c0d3"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Community
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div
+    class="bg-white"
+  >
+    <div
+      class="container text-center pb-5"
+    >
+      <div
+        class="row justify-center pt-5"
+      >
+        <div
+          class="col-md-6 offset-md-3"
+        >
+          <img
+            alt="Hero image"
+            height="360"
+            src="/assets/landing/header-01.svg"
+            width="313"
+          />
+        </div>
+      </div>
+      <div
+        class="row justify-center mt-5"
+      >
+        <div
+          class="col-md-8 offset-md-2"
+        >
+          <h1
+            class="main__header"
+          >
+            Become a Software Engineer the Hard Way
+          </h1>
+        </div>
+      </div>
+      <div
+        class="row justify-center mt-4"
+      >
+        <div
+          class="col-md-10 offset-md-1"
+        >
+          <p
+            class="p__large fw-light"
+          >
+            Learn the right foundations you need to become a full stack software engineer. Our curriculum takes no shortcuts and effectively trains students with no technical background to become great software engineers.
+          </p>
+        </div>
+      </div>
+      <div
+        class="row mt-5"
+      >
+        <div
+          class="col-md-6 offset-md-3 mb-5"
+        >
+          <a
+            class="btn btn-primary py-3 px-5 noUnderline"
+            href="/curriculum"
+          >
+            Get Started
+          </a>
+        </div>
+      </div>
+      <div
+        class="row mt-5"
+      >
+        <div
+          class="col-md-6 offset-md-3"
+        >
+          <h1
+            class="display-4 fw-bold"
+            id="learning"
+          >
+            Learning Process
+          </h1>
+        </div>
+      </div>
+      <div
+        class="row mt-5"
+      >
+        <div
+          class="col-md-10 offset-md-1"
+        >
+          <p
+            class="p__large fw-light"
+          >
+            Our learning process is interactive and follows the same practice as a well functioning engineering team. From the first line of code you write, you will be code reviewed by engineers to ensure you are always following industry best practices.
+          </p>
+        </div>
+      </div>
+      <div
+        class="row mt-5 align-items-start mb-5"
+      >
+        <div
+          class="col-md-4"
+        >
+          <img
+            alt="Modern curriculum"
+            height="170"
+            layout="fixed"
+            src="/assets/landing/choose-01.svg"
+            width="163"
+          />
+          <p
+            class="mt-3 fw-bold h3"
+          >
+            Modern Curriculum
+          </p>
+          <p
+            class="mt-4 fw-light"
+          >
+            First the curriculum will help you achieve mastery in JavaScript. Using JavaScript, you will learn about different branches of software engineering: websites, mobile applications, servers, and machine learning.
+          </p>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <img
+            alt="Support"
+            height="170"
+            layout="fixed"
+            src="/assets/landing/choose-02.svg"
+            width="259"
+          />
+          <p
+            class="mt-3 fw-bold h3"
+          >
+            Support
+          </p>
+          <p
+            class="mt-4 fw-light"
+          >
+            One of the most important skills in a challenging workplace is knowing how to ask for help. Our curriculum is intentionally difficult and we have dedicated mentors to answer your questions and guide you how to communicate effectively.
+          </p>
+        </div>
+        <div
+          class="col-md-4"
+        >
+          <img
+            alt="Work Experience"
+            height="170"
+            layout="fixed"
+            src="/assets/landing/choose-03.svg"
+            width="93"
+          />
+          <p
+            class="mt-3 fw-bold h3"
+          >
+            Work Experience
+          </p>
+          <p
+            class="mt-4 fw-light"
+          >
+            Once you have completed our curriculum and learned to communicate effectively, you will be invited to contribute to this open-source project to improve the learning experience for future students.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container-fluid py-5"
+      style="background: rgb(84, 64, 216); color: white;"
+    >
+      <div
+        class="container mt-5"
+      >
+        <h1
+          class="mt-5 display-4 fw-bold text-center"
+          id="journey"
+        >
+          Your Learning Journey
+        </h1>
+        <p
+          class="p__large mt-5 fw-light col-md-8 offset-md-2 pb-5 text-center"
+        >
+          Our learning process is interactive and follows the same practice as a well functioning engineering team. From the first line of code you write, you will be code reviewed by engineers to ensure you are always following industry best practice
+        </p>
+        <div
+          class="row mt-5 pb-5"
+        >
+          <div
+            class="col-md-5 order-md-2 text-center"
+          >
+            <img
+              alt="Creating an account"
+              height="293"
+              layout="intrinsic"
+              src="/assets/landing/journey-01.svg"
+              width="403"
+            />
+          </div>
+          <div
+            class="col-md-5 offset-md-1 order-md-1 align-self-center"
+          >
+            <h2
+              class="fw-bold"
+            >
+              Creating an account
+            </h2>
+            <p
+              class="p__regular mt-3 fw-light"
+            >
+              After creating an account, you will gain access to our code reviewed curriculum and our community chat. You will be able to setup pathacks.com CLI which will allow you to submit code for review. The CLI allows you to code in Javascript from any code editor of your choice.
+            </p>
+          </div>
+        </div>
+        <div
+          class="row mt-5 pb-5"
+        >
+          <div
+            class="col-md-5 offset-md-1 text-center"
+          >
+            <img
+              alt="Curriculum"
+              height="449"
+              layout="intrinsic"
+              src="/assets/landing/journey-02.svg"
+              width="419"
+            />
+          </div>
+          <div
+            class="col-md-5 align-self-center"
+          >
+            <h2
+              class="fw-bold"
+            >
+              Curriculum
+            </h2>
+            <p
+              class="p__regular mt-3 fw-light"
+            >
+              Each lesson in our curriculum is designed to be hands on and you will learn by working through the exercises in the curriculum. All hosting will be provided for you so you can proudly share your accomplishments with the world without spending a penny. The exercises and challenges are designed to be difficult to force you to ask questions. Students who have passed the lessons are available in the chatrooms to help you with your questions.
+               
+              <span
+                class="fw-bold"
+              >
+                (Meetups are currently unavailable due to COVID-19)
+              </span>
+            </p>
+          </div>
+        </div>
+        <div
+          class="row mt-5 pb-5"
+        >
+          <div
+            class="col-md-5 order-md-2 text-center"
+          >
+            <img
+              alt="Pay it forward"
+              height="437"
+              layout="intrinsic"
+              src="/assets/landing/journey-03.svg"
+              width="419"
+            />
+          </div>
+          <div
+            class="col-md-5 order-md-1 offset-md-1 align-self-center"
+          >
+            <h2
+              class="fw-bold"
+            >
+              Pay It Forward
+            </h2>
+            <p
+              class="p__regular mt-3 fw-light"
+            >
+              When you finish your lesson, you will have the opportunity to help new students who are starting the lesson. By code reviewing students to the same standard that you were code reviewed, you help ensure that new students are writing good code and becoming better engineers. At the same time, conducting regular code reviews helps you improve your ability to read/debug code as well as understand the lesson concepts at a deeper level.
+            </p>
+          </div>
+        </div>
+        <div
+          class="row mt-5 pb-5"
+        >
+          <div
+            class="col-md-5 offset-md-1 text-center"
+          >
+            <img
+              alt="Work Experience"
+              height="418"
+              layout="intrinsic"
+              src="/assets/landing/journey-04.svg"
+              width="316"
+            />
+          </div>
+          <div
+            class="col-md-5 align-self-center"
+          >
+            <h2
+              class="fw-bold"
+            >
+              Work Experience
+            </h2>
+            <p
+              class="p__regular mt-3 fw-light"
+            >
+              After completing our curriculum, you will gain access to our internal code repository that powers pathacks.com and have the opportunity to work with our engineers and experience the entire workflow of a full stack software engineer. There will be bugs and feature list on our issue board for you to contribute to and you will be held to the same expectations as any respected engineer: high quality code and proper testing. Every feature contribution will be documented and recognized on our contribution list and you would be able to list your contributions as work experience on your resume.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container mt-5 py-5 text-center"
+    >
+      <h1
+        class="display-4 fw-bold"
+      >
+        Start Your Journey
+      </h1>
+      <p
+        class="p__large mt-3 fw-light"
+      >
+        Become a full stack software engineer - 100% Free!
+      </p>
+      <a
+        class="btn btn-primary py-3 px-5 mt-4 noUnderline"
+        href="/curriculum"
+      >
+        Get Started
+      </a>
+    </div>
+  </div>
+  <footer
+    class="fw-light text-center py-5 bg-white text-muted"
+  >
+    © Copyright 
+    2024
+     GarageScript
+  </footer>
+</div>
+`;
