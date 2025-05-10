@@ -22,7 +22,6 @@ import {
 import { initializeApollo } from '../helpers/apolloClient-server'
 import styles from '../scss/curriculum.module.scss'
 import useHasMounted from '../helpers/useHasMounted'
-import LessonCertificate from '../components/LessonCard/LessonCertificate'
 
 const announcements = [
   'To make space for other students on our servers, your account will be deleted after 30 days of inactivity.',

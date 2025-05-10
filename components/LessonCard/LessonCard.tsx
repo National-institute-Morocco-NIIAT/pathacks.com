@@ -1,11 +1,11 @@
 import { useQuery } from '@apollo/client'
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import { CheckCircle } from 'react-feather'
 import GET_SUBMISSIONS from '../../graphql/queries/getSubmissions'
 import NavLink from '../NavLink'
 import Image from 'next/image'
 import styles from './lessonCard.module.scss'
-import { GetSessionQuery, Submission, SubmissionStatus, useGetSessionQuery } from '../../graphql'
+import { Submission, SubmissionStatus } from '../../graphql'
 import Link from 'next/link'
 import { get } from 'lodash'
 import LessonCertificate from './LessonCertificate';

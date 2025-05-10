@@ -71,6 +71,7 @@ export const Basic: React.FC = () => (
       reviewUrl="/review/js0"
       challengesUrl="/curriculum/js0"
       docUrl="https://www.notion.so/JS-4-Front-End-Engineering-c59fbdd58dcc4214956f7856e0892b52"
+      passedAt={0}
     />
   </MockedProvider>
 )
@@ -87,6 +88,7 @@ export const withInProgress: React.FC = () => (
       reviewUrl="/review/js0"
       challengesUrl="/curriculum/js0"
       docUrl="https://www.notion.so/JS-4-Front-End-Engineering-c59fbdd58dcc4214956f7856e0892b52"
+      passedAt={0}
     />
   </MockedProvider>
 )
@@ -103,6 +105,7 @@ export const withCompleted: React.FC = () => (
       reviewUrl="/review/js0"
       challengesUrl="/curriculum/js0"
       docUrl="https://www.notion.so/JS-4-Front-End-Engineering-c59fbdd58dcc4214956f7856e0892b52"
+      passedAt={0}
     />
   </MockedProvider>
 )

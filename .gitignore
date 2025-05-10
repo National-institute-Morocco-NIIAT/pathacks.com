@@ -125,3 +125,4 @@ package-lock.json
 
 # Storybook JS bundles and other static files
 storybook-static/
+pathacks.pem
