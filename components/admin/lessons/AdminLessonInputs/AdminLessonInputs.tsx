@@ -28,7 +28,7 @@ export type Props = {
     m: (Item & { lesson: { id: number } }) | null,
     e: { name: string; content: string; order: number } | null
   ) => void
-  action: (options: { variables: Item }) => Promise<Item | undefined>
+  action: (options: { variables: Item }) => Promise<Item | undefined | null>
 }
 
 const initValues = (
