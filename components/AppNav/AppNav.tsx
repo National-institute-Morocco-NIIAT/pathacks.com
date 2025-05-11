@@ -26,11 +26,11 @@ type NavItem = NavLinkProps & { name: string }
 
 const navItems: NavItem[] = [
   { path: CURRICULUM_PATH, name: 'Curriculum' },
-  {
-    path: REPO_PATH,
-    name: 'Repo',
-    external: true
-  },
+  // {
+  //   path: REPO_PATH,
+  //   name: 'Repo',
+  //   external: true
+  // },
   {
     path: DOCS_PATH + '/learn',
     name: 'Learn'
