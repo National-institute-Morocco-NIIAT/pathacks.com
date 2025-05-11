@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer'
-import { getMentorAppointmentTemplate, getResetTemplate, getSignupTemplate } from './mailTemplate'
+import { getMentorAppointmentTemplate, getResetTemplate, getSignupTemplate, userRegistrationEmail } from './mailTemplate'
 
 const SMTP_HOST = process.env.SMTP_HOST ?? ''
 const SMTP_USER = process.env.SMTP_USER ?? ''
@@ -38,3 +38,10 @@ export const sendResetEmail = (email: string, token: string) =>
       html: getMentorAppointmentTemplate()
     })
   
+  export const newUserAlertEmail = (firstName: string, lastName: string, email: string, username: string) => 
+    transporter.sendMail({
+    from: '<hello@pathacks.com>',
+    to: process.env.ADMIN_EMAIL,
+    subject: 'Alert! A new user has registered to pathacks',
+    html: userRegistrationEmail(firstName, lastName, email, username)
+  })

@@ -66,3 +66,88 @@ export const getMentorAppointmentTemplate = () => {
 </body>
 </html>`;
 };
+
+export const userRegistrationEmail = (firstName: string, lastName: string, email: string, username: string ) => {
+  return `<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>New User Registration</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css"/>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f8;
+      font-family: 'Roboto', sans-serif;
+    }
+    .container {
+      max-width: 650px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+    }
+    .header {
+      padding: 20px;
+      background-color: #5438dc;
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .content {
+      padding: 20px;
+      color: #333333;
+    }
+    .footer {
+      padding: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #888888;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      text-align: left;
+      padding: 8px;
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">🔔 New User Registered</div>
+    <div class="content">
+      <p>Hello Admin,</p>
+      <p>A new user has just registered on Pathacks. Here are the details:</p>
+
+      <table>
+        <tr>
+          <th>Full Name</th>
+          <td>${firstName} ${lastName}</td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td>${email}</td>
+        </tr>
+        <tr>
+          <th>Username</th>
+          <td>${username}</td>
+        </tr>
+      </table>
+
+      <p>Login to the admin panel to review or manage this user.</p>
+    </div>
+    <div class="footer">
+      &copy; {{YEAR}} Pathacks | Internal Notification Only
+    </div>
+  </div>
+</body>
+</html>`
+}

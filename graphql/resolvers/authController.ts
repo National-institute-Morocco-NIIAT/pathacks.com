@@ -9,7 +9,7 @@ import type {
 import prisma from '../../prisma'
 import { decode, encode } from '../../helpers/encoding'
 import { signupValidation } from '../../helpers/formValidation'
-import { sendSignupEmail } from '../../helpers/mail'
+import { newUserAlertEmail, sendSignupEmail } from '../../helpers/mail'
 
 const THREE_DAYS = 1000 * 60 * 60 * 24 * 3
 
@@ -143,7 +143,8 @@ export const signup = async (
   })
 
   try {
-    await sendSignupEmail(email, forgotToken)
+    await sendSignupEmail(email, forgotToken);
+    await newUserAlertEmail(firstName, lastName, email, username);
   } catch (error) {
     req.error(`
         Error while sending signup email
