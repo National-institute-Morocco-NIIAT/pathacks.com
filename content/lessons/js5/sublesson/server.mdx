@@ -186,7 +186,7 @@ app.listen(3000) // Your app needs to listen to a port number.
 ```
 
 To send a request, open your browser. In the url, type in:
-[http://localhost:3000/hello](http://localhost:3000/hello)
+[https://pathacks.com:3000/hello](https://pathacks.com:3000/hello)
 
 > Remember to restart your application each time you make changes to your code
 > so that your change is reflected.
@@ -602,7 +602,7 @@ Sometimes, you can specify for the path itself to be a variable by adding a `:`
 in front of the variable name
 
 ```jsx
-// Visit http://localhost:4098/users/billyjoel/profile
+// Visit https://pathacks.com:4098/users/billyjoel/profile
 ...
 app.get('/users/:username/profile/:age', (req, res) => {
   const userId = req.params.username
@@ -954,7 +954,7 @@ This middleware will create a path for every file in your public folder. If you
 have a picture called `c0d3.png` in the `public` folder, you can access the
 picture by going to
 
-[http://url:port/c0d3.png](http://localhost:300/c0d3.png)
+[http://url:port/c0d3.png](https://pathacks.com:300/c0d3.png)
 
 ```jsx
 app.use(express.static('./public'))

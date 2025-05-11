@@ -9,7 +9,7 @@ export default {
 export const Basic: React.FC = () => <NavLink path="/">Basic NavLink</NavLink>
 
 export const BlankLink: React.FC = () => (
-  <NavLink path="http://pathacks.com" external>
+  <NavLink path="https://pathacks.com" external>
     Blank NavLink
   </NavLink>
 )

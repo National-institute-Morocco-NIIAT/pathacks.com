@@ -33,7 +33,7 @@ To begin we will need to set up the code base on your own machine. To do this we
  **Do not commit MAILGUN_API_KEY or share it outside c0d3.**
 ```
    MAILGUN_API_KEY=123abc #ask for valid key in chat
-   CLIENT_URL=http://localhost:4000 #used in registration email
+   CLIENT_URL=https://pathacks.com:4000 #used in registration email
    #postgres user, database name, password, host and port
    DB_USER=c0d3_admin
    DB_NAME=c0d3
@@ -50,8 +50,8 @@ To begin we will need to set up the code base on your own machine. To do this we
 
 To submit challenges:
 1. Logout `c0d3 logout`.
-2. Login to your local server `c0d3 login --url http://localhost:4000/api/graphql`.
-3. Submit your code `c0d3 submit --url http://localhost:4000/api/graphql`
+2. Login to your local server `c0d3 login --url https://pathacks.com:4000/api/graphql`.
+3. Submit your code `c0d3 submit --url https://pathacks.com:4000/api/graphql`
 It should be visible on your local setup.
 
 To connect to postgres database inside container:

@@ -14349,7 +14349,7 @@ exports[`Storyshots Components/NavLink Basic 1`] = `
 exports[`Storyshots Components/NavLink Blank Link 1`] = `
 <a
   className=" noUnderline"
-  href="http://pathacks.com"
+  href="https://pathacks.com"
   rel="noopener noreferrer"
   target="_blank"
 >

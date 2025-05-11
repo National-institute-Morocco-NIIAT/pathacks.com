@@ -19,7 +19,7 @@ export const PRIMARY_COLOR_HEX = 0x5440d8
 const DEPLOYMENT_URL =
   process.env.CLIENT_URL ??
   process.env.VERCEL_URL ??
-  `http://localhost:${process.env.PORT ?? 3000}`
+  `https://pathacks.com:${process.env.PORT ?? 3000}`
 
 export const CURRICULUM_URL = `${DEPLOYMENT_URL}${CURRICULUM_PATH}`
 export const REVIEW_URL = `${DEPLOYMENT_URL}${REVIEW_PATH}`

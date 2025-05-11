@@ -23,7 +23,7 @@ Follow
 ## How to Use Storybook
 
 1. Run `STORY_PORT=6006 yarn storybook`.
-2. Navigate to [http://localhost:6006](http://localhost:6006) in your browser.
+2. Navigate to [https://pathacks.com:6006](https://pathacks.com:6006) in your browser.
 
 ## Contributing
 
