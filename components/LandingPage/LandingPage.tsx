@@ -29,7 +29,18 @@ const LandingPage: React.FC = () => {
             zIndex: 0
           }}
         >
-          <iframe
+          <video
+            width="100%"
+            height="100%"
+            autoPlay
+            muted
+            loop
+            playsInline
+            src='/assets/lp-bg.mp4'
+            style={{objectFit: "cover", pointerEvents: "none"}}
+
+            />
+          {/* <iframe
             width="100%"
             height="100%"
             src="https://www.youtube.com/embed/mOFoh9FUR8w?autoplay=1&mute=1&controls=0&loop=1&playlist=mOFoh9FUR8w&modestbranding=1&rel=0"
@@ -41,7 +52,7 @@ const LandingPage: React.FC = () => {
               pointerEvents: "none",
               objectFit: "cover"
             }}
-          />
+          /> */}
         </div>
         <div 
           className="container text-center pb-5"

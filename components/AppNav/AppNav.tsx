@@ -8,7 +8,7 @@ import ProfileDropdownMenu from '../ProfileDropdownMenu'
 import styles from '../../scss/appNav.module.scss'
 import {
   // REPO_PATH,
-  DOCS_PATH,
+  // DOCS_PATH,
   CURRICULUM_PATH,
   DISCORD_PATH,
   LOGIN_PATH,
@@ -31,10 +31,10 @@ const navItems: NavItem[] = [
   //   name: 'Repo',
   //   external: true
   // },
-  {
-    path: DOCS_PATH + '/learn',
-    name: 'Learn'
-  },
+  // {
+  //   path: DOCS_PATH + '/learn',
+  //   name: 'Learn'
+  // },
   {
     path: DISCORD_PATH,
     name: 'Community',
