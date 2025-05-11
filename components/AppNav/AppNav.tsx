@@ -7,7 +7,7 @@ import { Container, Nav } from 'react-bootstrap'
 import ProfileDropdownMenu from '../ProfileDropdownMenu'
 import styles from '../../scss/appNav.module.scss'
 import {
-  REPO_PATH,
+  // REPO_PATH,
   DOCS_PATH,
   CURRICULUM_PATH,
   DISCORD_PATH,
