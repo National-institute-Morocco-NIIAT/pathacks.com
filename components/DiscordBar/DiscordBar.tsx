@@ -27,7 +27,7 @@ const DiscordBar: React.FC = () => {
   const getData = async () => {
     try {
       const data = await fetch(
-        'https://discord.com/api/guilds/828783458469675019/widget.json'
+        'https://discord.com/api/guilds/1328750679396712569/widget.json'
       )
       const json = await data.json()
       if ('members' in json) setData(json as discordJSON)
@@ -76,7 +76,7 @@ const DiscordBar: React.FC = () => {
       </div>
       <a
         className={`${styles['discord_link']} fw-bold text-white`}
-        href="https://discord.gg/c0d3"
+        href="https://discord.gg/9QRcQsYZ"
         target="_blank"
         rel="noreferrer"
       >
