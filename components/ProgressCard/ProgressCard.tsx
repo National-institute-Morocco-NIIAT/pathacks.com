@@ -79,7 +79,7 @@ const WelcomeMessage: React.FC<{
   if (!loggedIn)
     return (
       <h4 className={`${styles['progress-card__title']} mt-4 text-center `}>
-        Join C0D3 now and start your software engineering journey!
+        Join Pathacks now and start your software engineering journey!
       </h4>
     )
   let title = ''

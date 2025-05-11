@@ -92,12 +92,12 @@ const DiscordErrorPage: React.FC<DiscordErrorPageProps> = ({
       <>
         <p>
           Sorry, but it looks like the Discord account you are trying to link to
-          your C0D3 account is already in use by another account.
+          your Pathacks account is already in use by another account.
         </p>
         <p>
           To fix this, you can either use a different Discord account or, if the
           account you are trying to link is already connected to a different
-          C0D3 account, you can go to that account and unlink the Discord
+          Pathacks account, you can go to that account and unlink the Discord
           account. Then, come back to this account and try linking the Discord
           account again.
         </p>
