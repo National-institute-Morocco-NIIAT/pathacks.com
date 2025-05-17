@@ -131,7 +131,7 @@ const SubLessonPage: React.FC<Props> & WithLayout = ({
   lessonSlug,
   subLessonSlug,
   subLessons,
-  githubFilePath
+  // githubFilePath
 }) => {
   const breakpoint = useBreakpoint('lg', 'up')
 
