@@ -25,7 +25,7 @@ interface Props {
 const Docs: React.FC<Props> & WithLayout = ({
   source,
   frontMatter,
-  docFilePath
+  // docFilePath
 }) => {
   const router = useRouter()
   return (
