@@ -1,7 +1,7 @@
 import React from 'react'
 import NavLink from '../NavLink'
 import styles from './progressCard.module.scss'
-import { REPO_PATH } from '../../constants'
+// import { REPO_PATH } from '../../constants'
 
 const ProgressBar: React.FC<{ progressCount: number }> = ({
   progressCount
@@ -150,7 +150,7 @@ const ProgressCard: React.FC<{
           </>
         )}
       </p>
-      <div className="mt-4 d-flex flex-column">
+      {/* <div className="mt-4 d-flex flex-column">
         {completedAndLoggedIn ? (
           <a
             href={REPO_PATH}
@@ -166,7 +166,7 @@ const ProgressCard: React.FC<{
             Setup Development Environment
           </NavLink>
         )}
-      </div>
+      </div> */}
     </div>
   )
 }

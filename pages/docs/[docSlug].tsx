@@ -15,7 +15,7 @@ import { parseMDX } from '../../helpers/static/parseMDX'
 import MDXcomponents from '../../helpers/mdxComponents'
 import { useRouter } from 'next/router'
 import styles from '../../scss/mdx.module.scss'
-import EditPage from '../../components/EditPage'
+// import EditPage from '../../components/EditPage'
 interface Props {
   source: MDXRemoteSerializeResult
   frontMatter: { title?: string }
@@ -46,7 +46,7 @@ const Docs: React.FC<Props> & WithLayout = ({
       )}
 
       <MDXRemote {...source} components={MDXcomponents}></MDXRemote>
-      <EditPage filePath={docFilePath} />
+      {/* <EditPage filePath={docFilePath} /> */}
     </div>
   )
 }

@@ -17,7 +17,7 @@ import { initializeApollo } from '../../../helpers/apolloClient-server'
 
 import NextPreviousLessons from '../../../components/NextPreviousLessons'
 import SubLessonLinks from '../../../components/SubLessonLinks'
-import EditPage from '../../../components/EditPage'
+// import EditPage from '../../../components/EditPage'
 import MDXcomponents from '../../../helpers/mdxComponents'
 
 import mdxStyles from '../../../scss/mdx.module.scss'
@@ -181,7 +181,7 @@ const SubLessonPage: React.FC<Props> & WithLayout = ({
             </div>
           )}
         </div>
-        <EditPage filePath={githubFilePath} />
+        {/* <EditPage filePath={githubFilePath} /> */}
       </div>
     </div>
   )
