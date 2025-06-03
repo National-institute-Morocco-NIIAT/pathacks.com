@@ -52,6 +52,11 @@ const getExercisesData: GetExercisesQuery = {
       title: 'General Algorithms',
       docUrl: '',
       slug: 'js9'
+    },
+    {
+      title: 'Foundations of Data Science',
+      slug: 'ds0',
+      docUrl: ''
     }
   ],
   alerts: [],
