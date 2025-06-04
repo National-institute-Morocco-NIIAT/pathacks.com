@@ -29,7 +29,7 @@ async function main() {
 }
 
 async function seedLessons() {
-  prisma.lesson.deleteMany({});
+  await prisma.lesson.deleteMany({});
   return prisma.$transaction(
     lessonsData.map(data =>
       prisma.lesson.create({ data, include: { challenges: true } })
