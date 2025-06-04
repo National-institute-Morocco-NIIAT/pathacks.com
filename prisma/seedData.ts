@@ -715,8 +715,8 @@ export const lessonsData = Prisma.validator<Prisma.LessonCreateInput[]>()([
     title: 'Foundations of Data Science',
     description: 'A beginner-friendly introduction to Data Science with Python!',
     order: 10,
-    slug: 'ds0',
-    docUrl: '/curriculum/ds0/introduction_to_data_and_python',
+    slug: 'js0',
+    docUrl: '/curriculum/js10/introduction_to_data_and_python',
     challenges: {
       createMany: {
         data: [
