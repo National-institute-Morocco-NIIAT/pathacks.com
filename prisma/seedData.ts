@@ -711,79 +711,79 @@ export const lessonsData = Prisma.validator<Prisma.LessonCreateInput[]>()([
       }
     }
   },
-  // {
-  //   title: 'Foundations of Data Science',
-  //   description: 'A beginner-friendly introduction to Data Science with Python!',
-  //   order: 10,
-  //   slug: 'js0',
-  //   docUrl: '/curriculum/js10/introduction_to_data_and_python',
-  //   challenges: {
-  //     createMany: {
-  //       data: [
-  //         {
-  //           title: 'Sum of Two Numbers (Python)',
-  //           description:
-  //             "Write a Python function that takes in 2 numbers and returns their sum.\n\nExample:\n\n```\nsolution(3, 7) # Should return 10\nsolution(1, 2) # Should return 3\n```",
-  //           order: 1
-  //         },
-  //         {
-  //           title: 'Mean of a List',
-  //           description:
-  //             "Write a function that takes in a list of numbers and returns their mean (average).\n\nExample:\n\n```\nsolution([1, 2, 3, 4, 5]) # Should return 3.0\nsolution([10, 20, 30]) # Should return 20.0\n```",
-  //           order: 2
-  //         },
-  //         {
-  //           title: 'Is Value Missing?',
-  //           description:
-  //             "Write a function that takes in a value and returns `True` if it is `None`, otherwise returns `False`.\n\nExample:\n\n```\nsolution(None) # Should return True\nsolution(5) # Should return False\n```",
-  //           order: 3
-  //         },
-  //         {
-  //           title: 'Count Missing in List',
-  //           description:
-  //             "Write a function that takes in a list and returns how many `None` values are in the list.\n\nExample:\n\n```\nsolution([1, None, 3, None]) # Should return 2\nsolution([1, 2, 3]) # Should return 0\n```",
-  //           order: 4
-  //         },
-  //         {
-  //           title: 'Max Value in List',
-  //           description:
-  //             "Write a function that returns the largest number from a list.\n\nExample:\n\n```\nsolution([1, 4, 2, 10]) # Should return 10\nsolution([-5, -2, -10]) # Should return -2\n```",
-  //           order: 5
-  //         },
-  //         {
-  //           title: 'Filter Positive Numbers',
-  //           description:
-  //             "Write a function that takes a list and returns only the positive numbers.\n\nExample:\n\n```\nsolution([-2, 5, 0, 3, -1]) # Should return [5, 3]\n```",
-  //           order: 6
-  //         },
-  //         {
-  //           title: 'Column Mean (Dict of Lists)',
-  //           description:
-  //             "Write a function that takes in a dictionary where values are lists of numbers, and returns a dictionary with the mean of each list.\n\nExample:\n\n```\nsolution({'a': [1, 2, 3], 'b': [4, 5, 6]}) # Should return {'a': 2.0, 'b': 5.0}\n```",
-  //           order: 7
-  //         },
-  //         {
-  //           title: 'Create Dataset Row',
-  //           description:
-  //             "Write a function that takes in column names and values, and returns a dictionary representing a row in a dataset.\n\nExample:\n\n```\nsolution(['name', 'age'], ['Alice', 30]) # Should return {'name': 'Alice', 'age': 30}\n```",
-  //           order: 8
-  //         },
-  //         {
-  //           title: 'Apply Function to Column',
-  //           description:
-  //             "Write a function that takes in a list of values and a function, and returns a new list with the function applied to each value.\n\nExample:\n\n```\ndef square(x):\n  return x * x\n\nsolution([1, 2, 3], square) # Should return [1, 4, 9]\n```",
-  //           order: 9
-  //         },
-  //         {
-  //           title: 'Count Unique Values',
-  //           description:
-  //             "Write a function that returns the number of unique values in a list.\n\nExample:\n\n```\nsolution([1, 2, 2, 3, 1]) # Should return 3\nsolution(['a', 'b', 'a']) # Should return 2\n```",
-  //           order: 10
-  //         }
-  //       ]
-  //     }
-  //   }
-  // }
+  {
+    title: 'Foundations of Data Science',
+    description: 'A beginner-friendly introduction to Data Science with Python!',
+    order: 10,
+    slug: 'js0',
+    docUrl: '/curriculum/js10/introduction_to_data_and_python',
+    challenges: {
+      createMany: {
+        data: [
+          {
+            title: 'Sum of Two Numbers (Python)',
+            description:
+              "Write a Python function that takes in 2 numbers and returns their sum.\n\nExample:\n\n```\nsolution(3, 7) # Should return 10\nsolution(1, 2) # Should return 3\n```",
+            order: 1
+          },
+          {
+            title: 'Mean of a List',
+            description:
+              "Write a function that takes in a list of numbers and returns their mean (average).\n\nExample:\n\n```\nsolution([1, 2, 3, 4, 5]) # Should return 3.0\nsolution([10, 20, 30]) # Should return 20.0\n```",
+            order: 2
+          },
+          {
+            title: 'Is Value Missing?',
+            description:
+              "Write a function that takes in a value and returns `True` if it is `None`, otherwise returns `False`.\n\nExample:\n\n```\nsolution(None) # Should return True\nsolution(5) # Should return False\n```",
+            order: 3
+          },
+          {
+            title: 'Count Missing in List',
+            description:
+              "Write a function that takes in a list and returns how many `None` values are in the list.\n\nExample:\n\n```\nsolution([1, None, 3, None]) # Should return 2\nsolution([1, 2, 3]) # Should return 0\n```",
+            order: 4
+          },
+          {
+            title: 'Max Value in List',
+            description:
+              "Write a function that returns the largest number from a list.\n\nExample:\n\n```\nsolution([1, 4, 2, 10]) # Should return 10\nsolution([-5, -2, -10]) # Should return -2\n```",
+            order: 5
+          },
+          {
+            title: 'Filter Positive Numbers',
+            description:
+              "Write a function that takes a list and returns only the positive numbers.\n\nExample:\n\n```\nsolution([-2, 5, 0, 3, -1]) # Should return [5, 3]\n```",
+            order: 6
+          },
+          {
+            title: 'Column Mean (Dict of Lists)',
+            description:
+              "Write a function that takes in a dictionary where values are lists of numbers, and returns a dictionary with the mean of each list.\n\nExample:\n\n```\nsolution({'a': [1, 2, 3], 'b': [4, 5, 6]}) # Should return {'a': 2.0, 'b': 5.0}\n```",
+            order: 7
+          },
+          {
+            title: 'Create Dataset Row',
+            description:
+              "Write a function that takes in column names and values, and returns a dictionary representing a row in a dataset.\n\nExample:\n\n```\nsolution(['name', 'age'], ['Alice', 30]) # Should return {'name': 'Alice', 'age': 30}\n```",
+            order: 8
+          },
+          {
+            title: 'Apply Function to Column',
+            description:
+              "Write a function that takes in a list of values and a function, and returns a new list with the function applied to each value.\n\nExample:\n\n```\ndef square(x):\n  return x * x\n\nsolution([1, 2, 3], square) # Should return [1, 4, 9]\n```",
+            order: 9
+          },
+          {
+            title: 'Count Unique Values',
+            description:
+              "Write a function that returns the number of unique values in a list.\n\nExample:\n\n```\nsolution([1, 2, 2, 3, 1]) # Should return 3\nsolution(['a', 'b', 'a']) # Should return 2\n```",
+            order: 10
+          }
+        ]
+      }
+    }
+  }
 
 ])
 
