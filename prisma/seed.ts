@@ -29,12 +29,27 @@ async function main() {
 }
 
 async function seedLessons() {
+  // Step 1: Remove dependent data first to avoid foreign key issues
+  await prisma.challenge.deleteMany({});
+  await prisma.lesson.deleteMany({});
+
+  // Step 2: Check for duplicates in lessonsData
+  const slugs = new Set<string>();
+  for (const item of lessonsData) {
+    if (slugs.has(item.slug)) {
+      throw new Error(`Duplicate slug in seed: ${item.slug}`);
+    }
+    slugs.add(item.slug);
+  }
+
+  // Step 3: Insert safely using transaction
   return prisma.$transaction(
     lessonsData.map(data =>
       prisma.lesson.create({ data, include: { challenges: true } })
     )
-  )
+  );
 }
+
 
 async function seedModules(admin: User) {
   return prisma.$transaction(
