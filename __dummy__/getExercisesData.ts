@@ -55,7 +55,7 @@ const getExercisesData: GetExercisesQuery = {
     },
     {
       title: 'Foundations of Data Science',
-      slug: 'ds0',
+      slug: 'js10',
       docUrl: ''
     }
   ],
