@@ -30,6 +30,9 @@ import Link from 'next/link'
 import { CURRICULUM_PATH } from '../../constants'
 import { useRouter } from 'next/router'
 import { LinkExternalIcon } from '@primer/octicons-react'
+
+import CodeEditor from '../CodeEditor';
+
 dayjs.extend(relativeTime)
 
 type ReviewCardProps = {
@@ -59,107 +62,112 @@ const ReviewButtons: React.FC<{
   submissionId,
   status
 }) => {
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) =>
-    setCommentType(e.target.value as CommentType)
-  const [addComment] = useAddCommentMutation()
-  const [accept] = useMutation(ACCEPT_SUBMISSION)
-  const [reject] = useMutation(REJECT_SUBMISSION)
-  const reviewSubmission = (review: typeof accept) => async () => {
-    await review({
-      variables: {
-        submissionId: submissionId,
-        lessonId,
-        comment: commentValue
-      }
-    })
-  }
-  const submitReview = () => {
-    switch (commentType) {
-      case 'comment': {
-        if (commentValue) {
-          addComment({
-            variables: {
-              submissionId: submissionState.id,
-              content: commentValue
-            },
-            update
-          })
-
-          setCommentValue('')
+    const onChange = (e: React.ChangeEvent<HTMLInputElement>) =>
+      setCommentType(e.target.value as CommentType)
+    const [addComment] = useAddCommentMutation()
+    const [accept] = useMutation(ACCEPT_SUBMISSION)
+    const [reject] = useMutation(REJECT_SUBMISSION)
+    const reviewSubmission = (review: typeof accept) => async () => {
+      await review({
+        variables: {
+          submissionId: submissionId,
+          lessonId,
+          comment: commentValue
         }
+      })
+    }
+    const submitReview = () => {
+      switch (commentType) {
+        case 'comment': {
+          if (commentValue) {
+            addComment({
+              variables: {
+                submissionId: submissionState.id,
+                content: commentValue
+              },
+              update
+            })
 
-        return
-      }
-      case 'accept': {
-        reviewSubmission(accept)()
-        return
-      }
-      case 'reject': {
-        reviewSubmission(reject)()
+            setCommentValue('')
+          }
+
+          return
+        }
+        case 'accept': {
+          reviewSubmission(accept)()
+          return
+        }
+        case 'reject': {
+          reviewSubmission(reject)()
+        }
       }
     }
-  }
 
-  const acceptRejectButtons = (status: SubmissionStatus) => {
-    if (status === SubmissionStatus.Open)
-      return (
-        <>
+    const acceptRejectButtons = (status: SubmissionStatus) => {
+      if (status === SubmissionStatus.Open)
+        return (
+          <>
+            <label>
+              <input
+                type="radio"
+                checked={commentType === 'accept'}
+                value="accept"
+                onChange={onChange}
+                className="me-2"
+              />
+              <p className="fw-bold d-inline">Accept</p>
+              <p className="text-muted">Submit feedback and approve submission</p>
+            </label>
+            <label>
+              <input
+                type="radio"
+                checked={commentType === 'reject'}
+                value="reject"
+                onChange={onChange}
+                className="me-2"
+              />
+              <p className="fw-bold d-inline">Reject</p>
+              <p className="text-muted">Request changes and reject submission</p>
+            </label>
+          </>
+        )
+      return <></>
+    }
+    return (
+      <>
+        <div className="d-flex justify-content-between px-2 py-1">
+          {acceptRejectButtons(status)}
           <label>
             <input
               type="radio"
-              checked={commentType === 'accept'}
-              value="accept"
+              checked={commentType === 'comment'}
+              value="comment"
               onChange={onChange}
               className="me-2"
             />
-            <p className="fw-bold d-inline">Accept</p>
-            <p className="text-muted">Submit feedback and approve submission</p>
+            <p className="fw-bold d-inline">Comment</p>
+            <p className="text-muted">
+              Submit general feedback without explicit approval
+            </p>
           </label>
-          <label>
-            <input
-              type="radio"
-              checked={commentType === 'reject'}
-              value="reject"
-              onChange={onChange}
-              className="me-2"
-            />
-            <p className="fw-bold d-inline">Reject</p>
-            <p className="text-muted">Request changes and reject submission</p>
-          </label>
-        </>
-      )
-    return <></>
+        </div>
+        <Button btnType="success" color="white" onClick={() => submitReview()}>
+          Submit
+        </Button>
+      </>
+    )
   }
-  return (
-    <>
-      <div className="d-flex justify-content-between px-2 py-1">
-        {acceptRejectButtons(status)}
-        <label>
-          <input
-            type="radio"
-            checked={commentType === 'comment'}
-            value="comment"
-            onChange={onChange}
-            className="me-2"
-          />
-          <p className="fw-bold d-inline">Comment</p>
-          <p className="text-muted">
-            Submit general feedback without explicit approval
-          </p>
-        </label>
-      </div>
-      <Button btnType="success" color="white" onClick={() => submitReview()}>
-        Submit
-      </Button>
-    </>
-  )
-}
 
 export const ReviewCard: React.FC<ReviewCardProps> = ({ submissionData }) => {
   const { lesson } = useRouter().query
 
+
+  const [, setCode] = useState('// Write your code here!');
+  const [language, setLanguage] = useState('javascript');
+
   const { id, diff, user, challenge, lessonId, challengeId, status } =
     submissionData
+  //console.log(1122, submissionData);
   const context = useContext(GlobalContext)
   const name = context.session?.user?.name
   const username = context.session?.user?.username
@@ -198,7 +206,7 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ submissionData }) => {
       if (index === -1)
         setSubmission(
           data.getPreviousSubmissions[
-            data.getPreviousSubmissions.length - 1
+          data.getPreviousSubmissions.length - 1
           ] as Submission
         )
       else setSubmission(data.getPreviousSubmissions[index] as Submission)
@@ -218,6 +226,11 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ submissionData }) => {
       )
     }
   }
+
+  function isGitDiff(text: string) {
+    return /(^|\n)(---|\+\+\+|@@|\+|\-)/.test(text);
+  }
+
   return (
     <>
       {diff && (
@@ -271,9 +284,8 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ submissionData }) => {
               <Accordion className={styles.card__descAccordion}>
                 <Accordion.Item
                   eventKey="0"
-                  className={`bg-white mb-2 ${
-                    showAccordion && styles['accordion__accordionItem--show']
-                  } ${styles.accordion__item}`}
+                  className={`bg-white mb-2 ${showAccordion && styles['accordion__accordionItem--show']
+                    } ${styles.accordion__item}`}
                 >
                   <Accordion.Header
                     onClick={() => setShowAccordion(prev => !prev)}
@@ -286,7 +298,16 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ submissionData }) => {
                 </Accordion.Item>
               </Accordion>
               <div className="m-0 p-0 mt-4">
-                <DiffView submission={submissionState} generalStatus={status} />
+                {!isGitDiff(diff) && <div className='mt-2' style={{ height: '250px' }}>
+                  <CodeEditor
+                    value={diff ?? ''}
+                    onChange={(val) => setCode(val || '')}
+                    language={language}
+                    onLanguageChange={(lang) => setLanguage(lang)}
+                    showLanguageSelector={false}
+                  />
+                </div>}
+                {isGitDiff(diff) && <DiffView submission={submissionState} generalStatus={status} />}
               </div>
             </div>
           </div>

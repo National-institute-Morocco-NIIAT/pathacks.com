@@ -33,6 +33,9 @@ import HighlightMarkdown from '../mdx/HighlightMarkdown/HighlightMarkdown'
 import { useRouter } from 'next/router'
 import { CURRICULUM_PATH } from '../../constants'
 
+import CodeEditor from '../CodeEditor';
+
+
 dayjs.extend(relativeTime)
 dayjs.extend(LocalizedFormat)
 
@@ -180,7 +183,7 @@ const ChallengeQuestionCardDisplay: React.FC<{
             className="card-header bg-white"
             title={dayjs(Number.parseInt(submission.createdAt)).format('LLLL')}
           >
-            Submitted {dayjs(parseInt(submission.createdAt)).fromNow()}
+            Submitted 2 {dayjs(parseInt(submission.createdAt)).fromNow()}
           </div>
         )}
         <div className="text-start ms-2">
@@ -362,8 +365,13 @@ const ChallengeMaterial: React.FC<ChallengeMaterialProps> = ({
     return <h1>No Challenges for this lesson</h1>
   }
 
+  //console.log(121, lessonStatus, userSubmissions);
+
   const router = useRouter()
   const { challenge } = router.query
+
+  const [code, setCode] = useState('// Write your code here!');
+  const [language, setLanguage] = useState('javascript');
 
   //create an object to evaluate the student's status with a challenge
   const userSubmissionsObject: UserSubmissionsObject = userSubmissions.reduce(
@@ -404,6 +412,9 @@ const ChallengeMaterial: React.FC<ChallengeMaterialProps> = ({
       if (currentChallengeID) return challenge.id === currentChallengeID
       return challenge.status !== SubmissionStatus.Passed
     }) || finalChallenge
+
+  //console.log(1112, currentChallenge, finalChallenge);
+
   const challengeTitleCards: React.ReactElement[] =
     challengesWithSubmissionData.map(challenge => {
       return (
@@ -457,10 +468,24 @@ const ChallengeMaterial: React.FC<ChallengeMaterialProps> = ({
         challengeList
       )}
 
-      <div className="col-md-8">
+      <div className="col-md-8 mb-5">
         {currentChallenge.id !== finalChallenge.id && (
           <ChallengeQuestionCard currentChallenge={currentChallenge} />
         )}
+
+        <div className='mt-2' style={{ height: '250px' }}>
+          <CodeEditor
+            value={code}
+            onChange={(val) => setCode(val || '')}
+            language={language}
+            onLanguageChange={(lang) => setLanguage(lang)}
+            submission={{
+              challengeId: currentChallenge.id,
+              lessonId: currentChallenge.lessonId
+            }}
+          />
+        </div>
+
         {lessonStatus.passedAt && currentChallenge.id === 0 && (
           <ChallengesCompletedCard
             lessonId={lessonId}

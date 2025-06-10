@@ -54,6 +54,7 @@ const DiffView: React.FC<{
   generalStatus: SubmissionStatus | undefined
 }> = ({ submission, generalStatus }) => {
   const { diff, id, comments, lessonId } = submission
+  //console.log(111111, diff);
   if (!diff) return <></>
   const files = gitDiffParser.parse(diff)
   type fileComments = Record<string, { lines: number[]; comments: Comment[] }>
@@ -146,6 +147,8 @@ const DiffView: React.FC<{
         <CopyButton value={newValue.join('\n')} />
       </>
     )
+
+    //console.log(122, diff, newValue);
 
     return (
       <div className="position-relative" key={fileIdx}>

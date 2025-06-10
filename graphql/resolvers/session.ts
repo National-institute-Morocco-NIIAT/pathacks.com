@@ -9,6 +9,9 @@ interface lessonMentorMapType {
 
 export const session = async (_parent: void, _args: void, context: Context) => {
   const user = context?.req?.user
+
+  console.log(120, user);
+  
   if (!user) return { lessonStatus: [] }
 
   // FYI: The reason we are querying with parallelized promises:

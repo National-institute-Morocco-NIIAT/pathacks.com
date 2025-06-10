@@ -1,5 +1,6 @@
 import type { Submission } from '.prisma/client'
 import {
+  MutationCreateSubmissionArgs,
   MutationAcceptSubmissionArgs,
   MutationRejectSubmissionArgs,
   SubmissionStatus
@@ -22,6 +23,48 @@ type ArgsUpdateSubmission = (
 ) & {
   reviewerId: number
   status: SubmissionStatus
+}
+
+// type ArgsCreateSubmission = (
+//   | MutationAcceptSubmissionArgs
+//   | MutationRejectSubmissionArgs
+// ) & {
+//   reviewerId: number
+//   status: SubmissionStatus
+// }
+
+// 
+export const createSubmission = async (
+  args: MutationCreateSubmissionArgs
+): Promise<Submission> => {
+  let id = 1;
+  const { lessonId, challengeId, diff } = args
+
+  console.log(args);
+
+  const submission = await prisma.submission.create({
+    //select: null,
+    //include: null,
+    data: {
+      challengeId,
+      lessonId,
+      userId: id,
+      diff,
+      status
+    },
+    include: {
+      challenge: true,
+      user: {
+        select: {
+          discordId: true,
+          username: true
+        }
+      },
+      lesson: true
+    }
+  })
+
+  return submission;
 }
 
 export const updateSubmission = async (
