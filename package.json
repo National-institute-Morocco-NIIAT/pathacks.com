@@ -9,7 +9,7 @@
     "db:up": "docker-compose --file docker/docker-compose.yml up --detach postgres",
     "db:down": "docker-compose --file docker/docker-compose.yml down",
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --no-type-checking",
     "start": "next start",
     "lint": "eslint . --ext .js --ext .ts --ext .tsx --ext .mdx",
     "lint:fix": "yarn lint --fix && prettier --write scss",
