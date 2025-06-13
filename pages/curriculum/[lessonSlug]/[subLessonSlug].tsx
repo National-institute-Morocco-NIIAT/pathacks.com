@@ -233,6 +233,8 @@ export const getStaticProps: GetStaticProps<any, Slugs> = async context => {
     query: GetLessonsDocument
   })
 
+  console.log(query.data.lessons)
+
   // TODO: Make type without challenge material, challenge page refetches it and is currently unused data
   const lesson = query.data.lessons.find(lesson => lesson.slug === lessonSlug)
   if (!lesson)
