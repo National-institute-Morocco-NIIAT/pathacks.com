@@ -152,7 +152,6 @@ export const Curriculum: React.FC<Props> = ({ lessons, alerts }) => {
     const { id, title, description, challenges, docUrl, slug } = lesson
     const status = lessonStatusMap[id]
     let passedAt = Number(status?.passedAt)
-    console.log("status: " + typeof (title))
     const passed = Boolean(status?.passedAt)
     let lessonState = ''
     if (idx === state.current) lessonState = 'inProgress'
