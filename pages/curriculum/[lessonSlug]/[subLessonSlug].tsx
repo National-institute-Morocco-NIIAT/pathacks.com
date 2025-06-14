@@ -143,13 +143,15 @@ const SubLessonPage: React.FC<Props> & WithLayout = ({
       data-testid="sublesson__container"
       className={`mt-3 ${styles.sublesson__container}`}
       style={{
-        gridTemplateColumns: breakpoint ? 'auto auto' : 'none'
+        gridTemplateColumns: breakpoint ? 'auto auto' : 'none',
       }}
     >
-      <TableOfContents
+      <div style={{maxHeight:"95vh", overflowY:"auto", position:"sticky", top:"10px"}}>
+        <TableOfContents
         selectedSubLesson={selectedSubLesson}
         breakpoint={breakpoint}
       />
+      </div>
       <div
         className={`card shadow-sm d-flex flex-column gap-5 border-0 p-3 p-md-4 bg-white ${mdxStyles['lesson-wrapper']}`}
       >
